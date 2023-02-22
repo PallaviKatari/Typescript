@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/bddeb2fe76.js" crossorigin="anonymous"></script>
+    <title>CRUD</title>
+</head>
+
+<body>
+    <div class="row">
+        <h3 class="text-primary" style="text-align: center;margin-top: 50px;">Create, Read, Update, Delete (CRUD)
+            Using JavaScript/TypeScript Source Code</h3>
+        <hr style="border-top:1px dotted #ccc;" />
+
+        <div class="col-md-6">
+            <div id="create">
+                <form action="javascript:void(0);" method="POST" class="form-group" onsubmit="Create()"
+                    style="margin-top:30px;margin-left: 20px;">
+                    <label>Full Name:</label>
+                    <input type="text" id="name" class="form-control" style="width: 400px;" />
+                    <br />
+                    <label>Designation:</label>
+                    <input type="text" id="des" class="form-control" style="width: 400px;" />
+                    <br />
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>
+                        <i class="fa-regular fa-square-plus"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-bordered" style="margin-top:30px;width:600px;">
+                <thead class="alert-info">
+                    <tr>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="result"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="edit">
+        <form action="javascript:void(0);" method="POST" class="form-group" id="update"
+            style="margin-left:100px;width:800px;">
+            <label>Full Name:</label>
+            <input type="text" id="update_name" class="form-control" />
+            <br />
+            <label>Designation:</label>
+            <input type="text" id="update_des" class="form-control" />
+            <br />
+            <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>
+                <i class="fa-regular fa-pen-to-square"></i></button> <button class="btn btn-danger"
+                onclick="editHider()"><i class="fa-regular fa-rectangle-xmark"></i></button>
+
+        </form>
+    </div>
+    </div>
+    </div>
+</body>
+<script src="crud.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Typescript</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">TYPESCRIPT</h1>
+        <hr>
+        <!--myfunction()-->
+        <h3 style="text-align: center;">DYNAMIC CLICK EVENT</h3>
+        <button onclick="myFunction()" class="btn-primary">Change link</button>
+        <a id="myAnchor" href="http://www.microsoft.com" class="link-dark" style="margin-left: 5px;">Microsoft</a>
+        <!--Event handling-->
+        <hr>
+        <h3 style="text-align: center;">EVENT HANDLING</h3>
+        <div id="sample" style="height: 200px; width: 200px; background-color: blue"></div>
+        <br>
+        <!--changebackground from Typescript-->
+        <input id="bg" onkeyup="changeBackground()" placeholder="write something" style="color:rgb(219, 20, 20)">
+        <hr>
+        <input type="text" onkeypress="alert('You have pressed a key inside text input!')" placeholder="text input">
+        <hr>
+        <textarea onkeypress="alert('You have pressed a key inside textarea!')" placeholder="textarea"></textarea>
+        <hr>
+        <input id="focus" type="text" onfocus="highlightInput()">
+        <hr>
+        <select onchange="alert('You have changed the selection!');">
+            <option>Select</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <hr>
+        <p id="result"></p>
+        <hr>
+        <p id="demo"></p>
+
+        <script>
+            //Invoke the function from external Typescript
+            initFunction();
+
+            //Change the background of the input type
+            var a = 22;
+            var b = 225;
+            var c = 220;
+            function changeBackground() {
+                bg.style.backgroundColor = 'pink';
+                //bg.style.backgroundColor = 'rgb(' + a + ', ' + b + ', ' + c + ')';
+                //bg.style.backgroundColor='rgb(255,0,78)';
+            }
+            //Highlight the input type
+            function highlightInput() {
+                var e = document.getElementById('focus');
+                e.style.backgroundColor = 'yellow';
+            }   
+        </script>
+        <script>
+            function myFunction() {
+                document.getElementById("myAnchor").innerHTML = "Google";
+                document.getElementById("myAnchor").href = "https://www.google.com";
+                document.getElementById("myAnchor").target = "_blank";
+            }
+        </script>
+        <!--transpiler is used to convert the ts to js using -> tsc index.ts-->
+        <script src="index.js"></script>
+        <script src="class.js"></script>
+        <script src="abstraction.js"></script>
+        <script src="encapsulation.js"></script>
+        <script src="inheritance.js"></script>
+        <script src="polymorphism.js"></script>
+        <script src="eventhandling.js"></script>
+        <script src="apicall.js"></script>
+        <script src="demo.js"></script>
+    </div>
+</body>
+
+</html>
