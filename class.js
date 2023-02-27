@@ -1,3 +1,4 @@
+//Class in Typescript
 var Car = /** @class */ (function () {
     function Car(model, color, isElectric) {
         this.model = model;
@@ -5,8 +6,9 @@ var Car = /** @class */ (function () {
         this.isElectric = isElectric;
     }
     Car.prototype.drive = function () {
-        var engineStarted = this.startEngine();
-        console.log("Engine started: " + engineStarted);
+        //const engineStarted: boolean = this.startEngine();
+        //console.log("Engine started: " + engineStarted);
+        console.log("".concat(this.model));
         console.log(this.model + ' ' + this.color + ' ' + this.isElectric);
         // some method to drive after starting the engine
     };
@@ -16,5 +18,6 @@ var Car = /** @class */ (function () {
     };
     return Car;
 }());
+//instance for the class Car
 var a = new Car('Tiago', 'Black', true);
 a.drive(); //Invoke the function drive using the object a

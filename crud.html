@@ -16,7 +16,7 @@
     <title>CRUD</title>
 </head>
 
-<body>
+<body style="background-image: url('https://wallpapercave.com/wp/wp9764009.jpg');background-size: cover;">
     <div class="row">
         <h3 class="text-primary" style="text-align: center;margin-top: 50px;">Create, Read, Update, Delete (CRUD)
             Using JavaScript/TypeScript Source Code</h3>
@@ -26,10 +26,10 @@
             <div id="create">
                 <form action="javascript:void(0);" method="POST" class="form-group" onsubmit="Create()"
                     style="margin-top:30px;margin-left: 20px;">
-                    <label>Full Name:</label>
+                    <label style="color:aliceblue">Full Name:</label>
                     <input type="text" id="name" class="form-control" style="width: 400px;" />
                     <br />
-                    <label>Designation:</label>
+                    <label style="color:aliceblue">Designation:</label>
                     <input type="text" id="des" class="form-control" style="width: 400px;" />
                     <br />
                     <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>
@@ -46,17 +46,17 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody id="result"></tbody>
+                <tbody id="result" style="color:aliceblue"></tbody>
             </table>
         </div>
     </div>
     <div id="edit">
         <form action="javascript:void(0);" method="POST" class="form-group" id="update"
             style="margin-left:100px;width:800px;">
-            <label>Full Name:</label>
+            <label style="color:aliceblue">Full Name:</label>
             <input type="text" id="update_name" class="form-control" />
             <br />
-            <label>Designation:</label>
+            <label style="color:aliceblue">Designation:</label>
             <input type="text" id="update_des" class="form-control" />
             <br />
             <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>

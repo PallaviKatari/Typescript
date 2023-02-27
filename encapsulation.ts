@@ -17,5 +17,5 @@ class Encapsulation {
 let e = new Encapsulation();
 e.setname('John Doe');
 e.getname();
-console.log("Name: " + this._name);//Cannot access outside the class
+//console.log("Name: " + this._name);//Cannot access outside the class
 

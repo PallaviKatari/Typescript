@@ -27,7 +27,7 @@
         <!--Event handling-->
         <hr>
         <h3 style="text-align: center;">EVENT HANDLING</h3>
-        <div id="sample" style="height: 200px; width: 200px; background-color: blue"></div>
+        <div id="sample" style="height: 200px; width: 200px; background-color: blue" onmouseenter="initFunction()"></div>
         <br>
         <!--changebackground from Typescript-->
         <input id="bg" onkeyup="changeBackground()" placeholder="write something" style="color:rgb(219, 20, 20)">
@@ -49,9 +49,6 @@
         <p id="demo"></p>
 
         <script>
-            //Invoke the function from external Typescript
-            initFunction();
-
             //Change the background of the input type
             var a = 22;
             var b = 225;

@@ -11,8 +11,9 @@ class Car {
     }
 
     public drive(): void {
-        const engineStarted: boolean = this.startEngine();
-        console.log("Engine started: " + engineStarted);
+        //const engineStarted: boolean = this.startEngine();
+        //console.log("Engine started: " + engineStarted);
+        console.log(`${this.model}`);
         console.log(this.model + ' ' + this.color + ' ' + this.isElectric);
         // some method to drive after starting the engine
     }
