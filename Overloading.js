@@ -7,6 +7,11 @@ function add()
                 console.log(a*a);
             }
             //function with 2 parameters
+            else if(arguments.length==1)
+            {
+                console.log("Function with 1 parameter");
+            }
+            //function with 2 parameters
             else if(arguments.length==2)
             {
                 console.log("Function with 2 parameters");

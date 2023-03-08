@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+//Abstraction Typescript
 var Character = /** @class */ (function () {
     function Character(name, damage, speed) {
         this.name = name;
@@ -31,7 +32,19 @@ var Goblin = /** @class */ (function (_super) {
     };
     return Goblin;
 }(Character));
+var Goblin1 = /** @class */ (function (_super) {
+    __extends(Goblin1, _super);
+    function Goblin1(name, damage, speed) {
+        return _super.call(this, name, damage, speed) || this;
+    }
+    Goblin1.prototype.damagePerSecond = function () {
+        console.log("Name: " + this.name + " " + "\n" + "damagePerSecond: " + this.damage / this.attackSpeed);
+    };
+    return Goblin1;
+}(Character));
 // let c = new Character('ABC', 123, 123);//Cannot create an instance of an abstract class
 // Character.damagePerSecond();
 var g = new Goblin('ABC', 123, 123);
 g.damagePerSecond();
+var g1 = new Goblin1('ABC', 123, 123);
+g1.damagePerSecond();

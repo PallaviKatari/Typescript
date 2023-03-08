@@ -31,7 +31,7 @@ getUsers()
 function getfakeAPI() {
     //Access data from fakeAPI
     //https://jsonplaceholder.typicode.com/posts
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://fakestoreapi.com/products')
     //fetch('https://jsonplaceholder.typicode.com/todos/1')
         .then(response => response.json())
         .then(json => console.log(json))
