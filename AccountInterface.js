@@ -16,7 +16,8 @@ var Account = /** @class */ (function () {
     };
     return Account;
 }());
+var balance = 10000;
 var sav = new Account(1, 'John');
-sav.balance(1000, 0.4);
+sav.balance(balance, 0.4);
 var cur = new Account(1, 'John');
-cur.balance(1000);
+cur.balance(balance);

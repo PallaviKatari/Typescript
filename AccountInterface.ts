@@ -28,7 +28,8 @@ class Account implements ISavingsAccount, ICurrentAccount {
         }
     }
 }
+let balance=10000;
 let sav: ISavingsAccount = new Account(1, 'John');
-sav.balance(1000, 0.4);
+sav.balance(balance, 0.4);
 let cur: ICurrentAccount = new Account(1, 'John');
-cur.balance(1000);
+cur.balance(balance);
