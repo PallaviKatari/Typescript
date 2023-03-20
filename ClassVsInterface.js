@@ -2,21 +2,21 @@
 exports.__esModule = true;
 exports.Developer = void 0;
 var Developer = /** @class */ (function () {
-    function Developer(name, position, ename, eposition) {
+    function Developer(name, position) {
         this.name = name;
         this.position = position;
-        this.ename = ename;
-        this.eposition = eposition;
+        // this.ename = ename;
+        // this.eposition = eposition;
+        // const dep = this.condition;
+        // const dep1 = this.condition1;
+        // dep.develop();
+        // dep1.develop();
     }
-    Developer.prototype.develop = function () {
-        console.log("".concat(this.name, " - Develop an app in ").concat(this.position));
-    };
-    Developer.prototype.edevelop = function () {
-        console.log("".concat(this.ename, " - Develop an app in ").concat(this.eposition));
-    };
+    Developer.prototype.develop = function () { console.log("".concat(this.name)); };
     return Developer;
 }());
 exports.Developer = Developer;
-var dev = new Developer("John", "Angular", "Peter", "React");
-dev.develop();
-dev.edevelop();
+var obj = new Developer('a', 'b');
+obj.develop();
+var obj1 = new Developer('c', 'd');
+obj1.develop();
