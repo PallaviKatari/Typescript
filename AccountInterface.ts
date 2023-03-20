@@ -16,11 +16,14 @@ class Account implements ISavingsAccount, ICurrentAccount {
         this.acc_name = accname;
     }
     balance(amount?: any, interest?: any) {
+        console.log("ACCOUNT DETAILS");
+        console.log(`Account Number:${this.acc_id}`);
+        console.log(`Account Name:${this.acc_name}`);
         if (interest != null) {
-            console.log(amount + (amount * interest));
+            console.log("SAVINGS ACCOUNT BALANCE: ", amount + (amount * interest));
         }
         else {
-            console.log(amount);
+            console.log("CURRENT ACCOUNT BALANCE: "+amount);
 
         }
 
