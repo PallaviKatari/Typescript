@@ -26,11 +26,9 @@ class Account implements ISavingsAccount, ICurrentAccount {
             console.log("CURRENT ACCOUNT BALANCE: "+amount);
 
         }
-
     }
-
 }
 let sav: ISavingsAccount = new Account(1, 'John');
 sav.balance(1000, 0.4);
 let cur: ICurrentAccount = new Account(1, 'John');
-sav.balance(1000);
+cur.balance(1000);
