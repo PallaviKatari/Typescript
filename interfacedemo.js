@@ -1,10 +1,8 @@
-var dev = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const dev = {
     id: 1,
     name: 'Bobby Hadz',
     salary: 100,
-    develop: function () {
-        console.log("".concat(this.name, " - Develop an app in ").concat(this.salary));
-    }
 };
-console.log(dev);
-dev.develop();
+//# sourceMappingURL=interfacedemo.js.map

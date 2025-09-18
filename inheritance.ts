@@ -17,9 +17,9 @@ class Child extends Parent {
     public childname: string;
 
     constructor(dad: string, mom: string, kid: string) {
-        super(dad, mom);
+        super(dad, mom); //John,Rita
 
-        this.childname = kid;
+        this.childname = kid; //Tom
     }
 
     public details(): void {

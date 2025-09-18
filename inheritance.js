@@ -27,8 +27,8 @@ var Parent = /** @class */ (function () {
 var Child = /** @class */ (function (_super) {
     __extends(Child, _super);
     function Child(dad, mom, kid) {
-        var _this = _super.call(this, dad, mom) || this;
-        _this.childname = kid;
+        var _this = _super.call(this, dad, mom) || this; //John,Rita
+        _this.childname = kid; //Tom
         return _this;
     }
     Child.prototype.details = function () {

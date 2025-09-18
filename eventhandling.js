@@ -1,14 +1,13 @@
 "use strict";
-exports.__esModule = true;
-exports.initFunction = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.initFunction = initFunction;
 //Event Handling
 function initFunction() {
-    var element = document.getElementById("sample");
+    const element = document.getElementById("sample");
     //element?.addEventListener("click", listenerFunction);
     // element?.addEventListener("mouseenter", listenerFunction1);
-    element === null || element === void 0 ? void 0 : element.addEventListener("mouseenter", listenerFunction1);
+    element?.addEventListener("mouseenter", listenerFunction1);
 }
-exports.initFunction = initFunction;
 //click & mouseenter
 // function listenerFunction(this: HTMLElement, ev: Event) {
 //     ev.preventDefault();//prevent the default action
@@ -27,3 +26,4 @@ function listenerFunction1(ev) {
     this.style.height = '150px';
     this.style.width = '150px';
 }
+//# sourceMappingURL=eventhandling.js.map

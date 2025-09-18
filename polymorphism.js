@@ -22,6 +22,9 @@ var Parent1 = /** @class */ (function () {
     Parent1.prototype.details = function () {
         console.log('Parents Details' + '\n' + this.fathername + '\n' + this.mothername);
     };
+    Parent1.prototype.override = function () {
+        console.log('Parent Override Method');
+    };
     return Parent1;
 }());
 var Child1 = /** @class */ (function (_super) {
@@ -35,7 +38,12 @@ var Child1 = /** @class */ (function (_super) {
         _super.prototype.details.call(this);
         console.log("Kid's name: ".concat(this.childname, "."));
     };
+    Child1.prototype.override = function () {
+        _super.prototype.override.call(this);
+        console.log('Child Override Method');
+    };
     return Child1;
 }(Parent1));
 var c1 = new Child1('John', 'Rita', 'Tom');
 c1.details();
+c1.override();

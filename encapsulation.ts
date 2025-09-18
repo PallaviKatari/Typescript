@@ -2,9 +2,9 @@
 class Encapsulation {
     private _name: string;
 
-    // constructor(name: string) {
-    //     this._name = name;
-    // }
+    constructor(name: string) {
+        this._name = name;
+    }
 
     public getname(): any {
         console.log("Name: " + this._name);
@@ -14,7 +14,8 @@ class Encapsulation {
         this._name = value;
     }
 }
-let e = new Encapsulation();
+let e = new Encapsulation("John");
+e.getname();
 e.setname('John Doe');
 e.getname();
 //console.log("Name: " + this._name);//Cannot access outside the class

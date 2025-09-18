@@ -20,6 +20,9 @@ var Character = /** @class */ (function () {
         this.damage = damage;
         this.attackSpeed = speed;
     }
+    Character.prototype.damagePerSecond1 = function () {
+        return this.damage * this.attackSpeed;
+    };
     return Character;
 }());
 var Goblin = /** @class */ (function (_super) {
@@ -28,7 +31,20 @@ var Goblin = /** @class */ (function (_super) {
         return _super.call(this, name, damage, speed) || this;
     }
     Goblin.prototype.damagePerSecond = function () {
-        console.log("Name: " + this.name + " " + "\n" + "damagePerSecond: " + this.damage * this.attackSpeed);
+        console.log("Name: " +
+            this.name +
+            " " +
+            "\n" +
+            "damagePerSecond: " +
+            this.damage * this.attackSpeed);
+    };
+    Goblin.prototype.damagePerSecond2 = function () {
+        console.log("Name: " +
+            this.name +
+            " " +
+            "\n" +
+            "damagePerSecond: " +
+            (this.damage + this.attackSpeed));
     };
     return Goblin;
 }(Character));
@@ -38,13 +54,30 @@ var Goblin1 = /** @class */ (function (_super) {
         return _super.call(this, name, damage, speed) || this;
     }
     Goblin1.prototype.damagePerSecond = function () {
-        console.log("Name: " + this.name + " " + "\n" + "damagePerSecond: " + this.damage / this.attackSpeed);
+        console.log("Name: " +
+            this.name +
+            " " +
+            "\n" +
+            "damagePerSecond: " +
+            this.damage / this.attackSpeed);
+    };
+    Goblin1.prototype.damagePerSecond2 = function () {
+        console.log("Name: " +
+            this.name +
+            " " +
+            "\n" +
+            "damagePerSecond: " +
+            (this.damage + this.attackSpeed));
     };
     return Goblin1;
 }(Character));
 // let c = new Character('ABC', 123, 123);//Cannot create an instance of an abstract class
 // Character.damagePerSecond();
-var g = new Goblin('ABC', 123, 123);
+var g = new Goblin("ABC", 123, 123);
 g.damagePerSecond();
-var g1 = new Goblin1('ABC', 123, 123);
+console.log(g.damagePerSecond1());
+g.damagePerSecond2();
+var g1 = new Goblin1("ABCD", 1234, 1234);
 g1.damagePerSecond();
+console.log(g1.damagePerSecond1());
+g1.damagePerSecond2();

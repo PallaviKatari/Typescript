@@ -9,7 +9,7 @@ interface IDeveloper1 {
     edevelop: () => void
 }
 
-export class Developer implements IDeveloper, IDeveloper1 {
+class Developer implements IDeveloper, IDeveloper1 {
     name: string;
     position: string;
     ename:string;
@@ -26,7 +26,7 @@ export class Developer implements IDeveloper, IDeveloper1 {
         console.log(`${this.name} - Develop an app in ${this.position}`);
     }
     edevelop(): void {
-        console.log(`${this.ename} - Develop an app in ${this.eposition}`);
+        console.log(`${this.ename} - eDevelop an app in ${this.eposition}`);
     }
 }
 

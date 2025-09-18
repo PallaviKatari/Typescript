@@ -1,5 +1,5 @@
 //Event Handling
-export function initFunction() {
+function initFunction() {
     const element = document.getElementById("sample");
     //element?.addEventListener("click", listenerFunction);
    // element?.addEventListener("mouseenter", listenerFunction1);

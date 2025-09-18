@@ -1,10 +1,8 @@
 //Encapsulation in Typescript
 var Encapsulation = /** @class */ (function () {
-    function Encapsulation() {
+    function Encapsulation(name) {
+        this._name = name;
     }
-    // constructor(name: string) {
-    //     this._name = name;
-    // }
     Encapsulation.prototype.getname = function () {
         console.log("Name: " + this._name);
     };
@@ -13,7 +11,8 @@ var Encapsulation = /** @class */ (function () {
     };
     return Encapsulation;
 }());
-var e = new Encapsulation();
+var e = new Encapsulation("John");
+e.getname();
 e.setname('John Doe');
 e.getname();
 //console.log("Name: " + this._name);//Cannot access outside the class
