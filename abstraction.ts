@@ -38,7 +38,7 @@ class Goblin extends Character {
         this.name +
         " " +
         "\n" +
-        "damagePerSecond: " +
+        "damagePerSecond2: " +
         (this.damage + this.attackSpeed)
     );
   }
@@ -64,7 +64,7 @@ class Goblin1 extends Character {
         this.name +
         " " +
         "\n" +
-        "damagePerSecond: " +
+        "damagePerSecond2: " +
         (this.damage + this.attackSpeed)
     );
   }
@@ -75,7 +75,7 @@ class Goblin1 extends Character {
 
 let g = new Goblin("ABC", 123, 123);
 g.damagePerSecond();
-console.log(g.damagePerSecond1());
+console.log("Non Abstract Method"+g.damagePerSecond1());
 g.damagePerSecond2();
 let g1 = new Goblin1("ABCD", 1234, 1234);
 g1.damagePerSecond();
